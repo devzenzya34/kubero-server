@@ -46,8 +46,8 @@ Vagrant.configure("2") do |config|
 
   # Add hostname resolution
   config.vm.provision "shell", inline: <<-SHELL
-    echo "192.168.56.101 kubero-man1" | sudo tee -a /etc/hosts
-    echo "192.168.56.201 kubero-work1" | sudo tee -a /etc/hosts
-    echo "192.168.56.202 kubero-work2" | sudo tee -a /etc/hosts
+    echo "192.168.56.111 kubero-man1" | sudo tee -a /etc/hosts
+    echo "192.168.56.211 kubero-work1" | sudo tee -a /etc/hosts
+    echo "192.168.56.22 kubero-work2" | sudo tee -a /etc/hosts
   SHELL
 end
