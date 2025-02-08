@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.box_check_update = false
-  config.vm.box = "bento/ubuntu-22.04"
+  config.vm.box = "bento/ubuntu-24.04"
 
   # Provision SSH key
   config.vm.provision "shell" do |s|
@@ -46,8 +46,8 @@ Vagrant.configure("2") do |config|
 
   # Add hostname resolution
   config.vm.provision "shell", inline: <<-SHELL
-    echo "192.168.56.111 kubero-man1" | sudo tee -a /etc/hosts
+    echo "192.168.56.201 kubero-man1" | sudo tee -a /etc/hosts
     echo "192.168.56.211 kubero-work1" | sudo tee -a /etc/hosts
-    echo "192.168.56.22 kubero-work2" | sudo tee -a /etc/hosts
+    echo "192.168.56.212 kubero-work2" | sudo tee -a /etc/hosts
   SHELL
 end
